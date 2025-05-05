@@ -1,0 +1,130 @@
+/* Colors::
+light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+*/
+
+
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 180, 131, 0.8)),
+        url('../../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    /* so ova se pravat formi na kockata po metoda x, y, x, y */
+    position: relative;
+}
+
+.logobox {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.textBox {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transofrm translate vrakja 50% od goleminata i visinata na vnatresniot element  */
+
+}
+
+.headingPrimary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /* da ne se trese pozadinata */
+}
+
+.headingPrimaryMain {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /* animation-delay: 3s; - posle kolku s kje pocne animacijata
+    animation-iteration-count: 3; - kolku pati se potvoruva
+    animation-timing-function: ease; - kolku brzo sakame da se slucuva animacijata
+    
+    */
+}
+
+.headingPrimarySub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+    /* kratenka za animacija */
+}
+
+/* koga pocnuvame so animacija @keyframes mora da se stavat i ime na animacijata */
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* ako dodademe na  
+ transform: translateX(100px) rotate(-10deg) ;
+
+ 60%{
+  transform: rotate(120deg) ;
+
+kje se rotitra textot 
+
+vo translateX - X e nasokata deka kje ide od desno kon levo,
+
+Y - e nasoka deka kje ide od gore na dole
+
+
+Drugo, moze i animacijata da odi i na hover, 
+na primer da se dodaden na hover na logo  
+
+.logo {
+    height: 35px;
+}
+
+.logo:hover{
+animation: moveInRight 1s ease-out;
+*/
