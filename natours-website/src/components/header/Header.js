@@ -1,5 +1,6 @@
 import styles from './Header.module.css';
 import logo from '../../img/logo-white.png';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
 
@@ -13,6 +14,8 @@ export const Header = () => {
                     <span className={styles.headingPrimaryMain}>Outdoors</span>
                     <span className={styles.headingPrimarySub}>is where life happens</span>
                 </h1>
+
+                <Link className={styles.btnWhite}>Discover our tours</Link>
             </div>
         </div>
     )

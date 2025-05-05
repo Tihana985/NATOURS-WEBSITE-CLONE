@@ -21,12 +21,12 @@ Dark green: #28b485
 
 .logobox {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .textBox {
@@ -35,7 +35,7 @@ Dark green: #28b485
     left: 50%;
     transform: translate(-50%, -50%);
     /* transofrm translate vrakja 50% od goleminata i visinata na vnatresniot element  */
-
+    text-align: center;
 }
 
 .headingPrimary {
@@ -43,13 +43,14 @@ Dark green: #28b485
     text-transform: uppercase;
     backface-visibility: hidden;
     /* da ne se trese pozadinata */
+    margin-bottom: 6rem;
 }
 
 .headingPrimaryMain {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -64,9 +65,9 @@ Dark green: #28b485
 
 .headingPrimarySub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-out;
     /* kratenka za animacija */
 }
@@ -76,11 +77,11 @@ Dark green: #28b485
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -92,11 +93,11 @@ Dark green: #28b485
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -128,3 +129,25 @@ na primer da se dodaden na hover na logo
 .logo:hover{
 animation: moveInRight 1s ease-out;
 */
+
+.btnWhite {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    background-color: #fff;
+    color: #777;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+
+}
+
+.btnWhite:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.btnWhite:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+}
